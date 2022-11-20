@@ -6,11 +6,11 @@ using Cysharp.Threading.Tasks;
 using Match3.Controller;
 using Match3.View;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Match3.Model
 {
-    //TODO: Is this abstraction really needed? Can't imagine alternative field concept at the moment
-    public abstract class GameBoard : MonoBehaviour
+    public class GameBoard : MonoBehaviour
     {
         public event Action<IEnumerable<CellContent>> ContentAdded;
         public event Action<IEnumerable<CellContent>> ContentRemoved;
@@ -21,10 +21,11 @@ namespace Match3.Model
         public int Height => Cells.GetLength(0);
         public int Width => Cells.GetLength(1);
         
+        [SerializeField] private Tilemap _tilemap;
         [SerializeField] private ItemSpawner _itemSpawner;
         [SerializeField] private BoardView _boardView;
         private MatchChecker _matchChecker;
-        HashSet<CellMove> _movedCells = new HashSet<CellMove>();
+        private HashSet<CellMove> _movedCells = new HashSet<CellMove>();
 
         private void Awake()
         {
@@ -136,7 +137,11 @@ namespace Match3.Model
 
         public CellContent GetCellAt(Vector2Int position) => Cells[position.x, position.y];
 
-        public abstract bool CellExists(Vector2Int position);
+        public bool CellExists(Vector2Int position)
+        {
+            return Cells.GetLength(0) > position.x && position.x >= 0 &&
+                   Cells.GetLength(1) > position.y && position.y >= 0;
+        }
     }
 
     public struct CellMove

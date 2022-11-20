@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dff09e993574b23897ccd76f1a95e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _board: {fileID: 1832124379}
+  _board: {fileID: 1832124378}
   _itemController: {fileID: 1730530578}
   _piecePrefabs:
   - {fileID: 3272828793892575802, guid: 31582b6561f27e84796ee34388782348, type: 3}
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bcb073c793f4972b5faf075c7e38a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameBoard: {fileID: 1832124379}
+  _board: {fileID: 1832124378}
   _boardView: {fileID: 1832124377}
   _spawnPoints:
   - {fileID: 221673373}
@@ -2543,6 +2543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ContentType>k__BackingField: 1
   <Position>k__BackingField: {x: 0, y: 0}
+  <IsRemoved>k__BackingField: 0
   <Data>k__BackingField: {fileID: 11400000, guid: 199379969d0b3ed49a2996c7f373b50c,
     type: 2}
 --- !u!33 &1344378206
@@ -3192,7 +3193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7613fed02a3040709483cc2896400bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Board>k__BackingField: {fileID: 1832124379}
+  <Board>k__BackingField: {fileID: 1832124378}
   <BoardView>k__BackingField: {fileID: 1832124377}
   _itemDragger: {fileID: 1730530579}
   _cellHighlighter: {fileID: 1730530576}
@@ -3211,7 +3212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d31d73c35640729d71f0bac1ef45b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _board: {fileID: 1832124379}
+  _board: {fileID: 1832124378}
   _highlightMoveHeight: -5
   _highlightMoveScale: 1.5
   _highlightMoveTime: 0.5
@@ -3273,7 +3274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42afbd4459e4598bcddc4599c55ae97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameBoard: {fileID: 1832124379}
+  _gameBoard: {fileID: 0}
   _transforms:
   - {fileID: 1501366721}
   - {fileID: 555226471}
@@ -3339,7 +3340,7 @@ MonoBehaviour:
   - {fileID: 328541885}
   - {fileID: 1001723528}
   - {fileID: 1564609499}
---- !u!114 &1832124379
+--- !u!114 &1832124378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3348,12 +3349,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1832124375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b328fb1b432041bea2faedfc94b88ed5, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bdc873114254e85af4d02841d4c178b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tilemap: {fileID: 1296301745}
   _itemSpawner: {fileID: 317211905}
   _boardView: {fileID: 1832124377}
-  _tilemap: {fileID: 1296301745}
 --- !u!1 &1841432727
 GameObject:
   m_ObjectHideFlags: 0
