@@ -8,6 +8,6 @@ Future plans:
 4) UI for score/timer and tooltips.
 5) Startup menu (with possibility to start different game modes later).
 6) Think about adding some interesting interesting as background.
-X) Multiplatform support (at least mobile).
-X) New cells/items/buffs mechanics
-X) Sounds, particles, etc.
+7) Multiplatform support (at least mobile).
+8) New cells/items/buffs mechanics
+9) Sounds, particles, etc.
